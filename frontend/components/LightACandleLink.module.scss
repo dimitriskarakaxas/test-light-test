@@ -1,0 +1,83 @@
+@import '../assets/scss/variables.scss';
+
+.LightACandleLink{
+  margin: 0 auto;
+  width: 40%;
+
+  button {
+    background: transparent;
+    border: 0;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  
+    span {
+        width: 100%;
+    }
+
+    .caption {
+      font-size: 25.29px;
+    }
+  
+    .lightCandleButton {
+        display: flex;
+        font-family: $main-font;
+        font-style: italic;
+        font-size: 84.31px;
+        justify-content: center;
+  
+        img {
+            margin-left: 2rem;
+        }
+    }
+  }
+
+  .Divider {
+    width: 100%;
+    height: 1px;
+    background-color: rgba($color: white, $alpha: 0.5);
+    margin: 6rem 0;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .LightACandleLink{
+    button {
+      .caption {
+        font-size: 20px;
+      }
+
+      .lightCandleButton {
+        font-size: 68px;
+      }
+    }
+  } 
+}
+
+@media screen and (max-width: 768px) {
+  .LightACandleLink {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .LightACandleLink {
+
+    button {
+
+      .caption {
+        font-size: 16px;
+      }
+
+      .lightCandleButton {
+        font-size: 44px;
+      }
+    }
+
+    .Divider {
+      margin: 3rem 0;
+    }
+  }
+}

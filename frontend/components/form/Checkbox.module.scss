@@ -1,0 +1,50 @@
+@import '../../assets/scss/variables.scss';
+
+.checkboxContainer {
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  font-family: $text-font;
+  font-style: italic;
+  font-size: .85rem;
+
+  .inputCheckbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .checkbox {
+    background: transparent;
+    border: 1px solid white;
+    cursor: pointer;
+    margin-right: 1.25rem;
+    width: .8rem;
+    height: .8rem;
+    display: inline-block;
+
+    &[aria-checked=true] {
+      background: white;
+      &::after {
+        content:quote;
+      }
+    }
+  }
+  
+}
+
+@media screen and (max-width: 768px) {
+  .checkboxContainer {
+
+    .checkbox {
+      margin-right: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .checkboxContainer {
+    flex-wrap: wrap;
+  }
+}

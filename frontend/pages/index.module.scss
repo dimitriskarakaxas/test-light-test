@@ -1,0 +1,101 @@
+@import '../assets/scss/variables.scss';
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 12% 0 12%;
+  padding-top: 15%;
+  height: 80%;
+}
+
+.showText {
+  animation: fadeIn ease 3s;
+  text-align: center;
+  -webkit-animation: fadeIn ease 3s;
+
+  h1 {
+    margin: 0;
+  }
+}
+
+.title {
+  margin: 0;
+}
+
+.candles {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  bottom: 24px;
+  position: absolute;
+
+  a {
+    align-items: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-family: $main-font;
+    font-size: 1.15rem;
+    margin: 0 6rem;
+    position: relative;
+    padding-top: 80px;
+    animation: fadeIn ease 3s;
+    -webkit-animation: fadeIn ease 3s;
+
+    .candleTitle {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      font-family: $main-font;
+      font-style: italic;
+      left: 0;
+      margin: 0 auto;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      transition: ease-in .4s;
+      top: 0;
+    }
+
+    .iconArrow {
+      margin-top: 0.75rem;
+      width: 16px;
+    }
+
+    .singleCandle {
+      margin-top: 2rem;
+      max-width: 140px;
+    }
+
+    &:nth-child(2) {
+
+      .singleCandle {
+        margin-top: 5rem;;
+      }
+    }
+
+  }
+
+  a:hover {
+
+    .candleTitle {
+      top: -16px;
+      transition: ease-in .4s;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    margin: 0 8% 0 8%;
+    padding: 28% 0 0 0;
+  }
+}

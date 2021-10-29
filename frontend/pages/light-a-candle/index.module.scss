@@ -1,0 +1,130 @@
+@import '../../assets/scss/variables.scss';
+
+.container {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 12% 0 12%;
+    padding: 20% 0 0 0;
+    height: 100%;
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+}
+
+
+.candleLink {
+    width: 180px;
+    cursor: pointer;
+    letter-spacing: .2rem;
+    &:focus,
+    &:hover,
+    &:active {
+        border: none;
+        outline: none;
+    }
+}
+
+.icon {
+    background: {
+        image: url('/icon-candle.png');
+        size: 40%;
+        repeat: no-repeat;
+        position: 50%;
+    }
+    display: block;
+    height: 72px;
+    margin-bottom: 1.25rem;
+    width: 100%;
+}
+
+.title {
+    font-family: $secondary-font;
+    text-align: center;
+    font-size: .8rem;
+    line-height: 1.25rem;
+    text-transform: uppercase;
+}
+
+.sendAPrayer > .icon {
+    &:focus,
+    &:hover,
+    &:active {
+        background-image: url('/icon-candle-send.png');
+    }
+}
+
+.meditate > .icon {
+    &:focus,
+    &:hover,
+    &:active {
+        background-image: url('/icon-candle-meditate.png');
+    }
+}
+
+.postACandle {
+    text-align: center;
+
+    > .icon {
+        &:focus,
+        &:hover,
+        &:active {
+            background-image: url('/icon-candle-post.png');
+        }
+    }
+
+    label {
+        display: inline-block;
+        margin-top: 1rem;
+
+        button {
+            margin: 0 .5rem;
+        }
+    }
+}
+
+.shareTwitter {
+    width: 32px;
+    height: 32px;
+    background: url('/icon-twitter-hover.svg');
+
+    &:hover {
+        background: url('/icon-twitter.svg');
+    }
+}
+
+.shareFacebook {
+    width: 32px;
+    height: 32px;
+    background: url('/icon-facebook-hover.svg');
+
+    &:hover {
+        background: url('/icon-facebook.svg');
+    }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        align-items: center;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 22% 0 0 0;
+    }
+
+    .candleLink {
+        height: initial;
+        margin-bottom: 4rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 28% 0 0 0;
+    }
+}

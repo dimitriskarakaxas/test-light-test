@@ -1,0 +1,89 @@
+@import '../../assets/scss/variables.scss';
+
+.subscribeComponent {
+  text-align: center;
+  width: 100%;
+
+  > p {
+    font-weight: 300;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+
+  .thanksText {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8rem;
+  }
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 75%;
+
+    input[type="text"], input[type="email"], > div {
+      width: 38%;
+      margin: 0 2% 1rem 2%;
+    }
+
+    > div {
+        margin-bottom: 0;
+    }
+
+    button {
+      margin: 2rem 0 0 0;
+      width: 100%;
+    }
+
+    label {
+        margin-bottom: 1rem;
+    }
+
+  }
+}
+
+.candleButton {
+  position: absolute;
+  left: 2.75rem;
+  bottom: 2.75rem;
+  font-family: $main-font;
+  font-style: italic;
+}
+
+@media screen and (max-width: 1280px) {
+
+  .subscribeComponent {
+
+    form {
+      width: 100%;
+
+      input[type="text"], input[type="email"], > div {
+        width: 37%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .subscribeComponent {
+
+    form {
+
+      input[type="text"], input[type="email"], > div {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      input[type="email"] {
+        margin-bottom: 2rem;
+      }
+
+      button {
+        margin-bottom: 2rem;
+        padding: 0;
+      }
+    }
+  }
+}

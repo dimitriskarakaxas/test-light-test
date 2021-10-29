@@ -1,0 +1,31 @@
+{
+  "name": "strapi-starter-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "develop": "next dev",
+    "build": "next build",
+    "start": "next build && next start"
+  },
+  "dependencies": {
+    "@mailchimp/mailchimp_marketing": "^3.0.15",
+    "axios": "^0.19.2",
+    "md5": "^2.3.0",
+    "moment": "^2.24.0",
+    "next": "9.5.3",
+    "nodemailer": "^6.4.11",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-dropdown": "^1.7.0",
+    "react-markdown": "^4.2.2",
+    "react-moment": "^0.9.6",
+    "react-player": "^2.1.1",
+    "react-reveal": "^1.2.2",
+    "react-share": "^4.2.0"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.26.7",
+    "vercel": "^20.1.1"
+  }
+}

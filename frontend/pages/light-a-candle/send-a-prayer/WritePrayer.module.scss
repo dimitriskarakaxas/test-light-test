@@ -1,0 +1,187 @@
+@import '../../../assets/scss/variables.scss';
+
+.container {
+  align-items: center;
+  animation: fadeIn ease 3s;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: center;
+  margin: 0 12% 0 12%;
+  padding: 15% 0 4% 0; 
+  -webkit-animation: fadeIn ease 3s;
+}
+
+.title {
+  margin-bottom: 10rem;
+}
+
+.prayerForm {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 1rem 0;
+
+    > span {
+      margin-bottom: 1.5rem;
+      text-align: left;
+    }
+
+    > div {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 5rem;
+      width: 74%;
+
+      > div {
+        width: 45%;
+      }
+    }
+
+    textarea, input[type="text"], input[type="email"]{
+      font-style: italic;
+      font-size: .8rem;
+      padding: 1rem;
+    }
+
+    textarea {
+      background: transparent;
+      border: 1px solid white;
+      border-radius: .75rem;
+      margin-top: 1.25rem;
+      min-height: 140px;
+      padding: 1rem;
+      width: 100%;
+    }
+
+    input[type="text"], input[type="email"] {
+      border: 0;
+      border-bottom: 1px solid white;
+      border-radius: 0;
+      margin-bottom: .75rem;
+      padding: .75rem;
+      width: 90%;
+    }
+
+    p {
+      font-size: 1rem;
+      margin: 0;
+      width: 100%;
+
+      span {
+        font-style: italic;
+      }
+
+      a {
+        color: white;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    }
+
+    .description {
+      font-size: 23px;
+      margin-top: 4rem;
+      line-height: 50px;
+    }
+}
+
+.emailIcon{
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  margin-top: 3rem;
+  width: 23%;
+
+  span {
+    letter-spacing: 2.6px;
+    font-size: .75rem;
+  }
+
+  div {
+    display: block;
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 1rem auto;
+    background: {
+      image: url('/icon-candle.png');
+      size: 100%;
+    }
+  }
+
+  &:hover {
+    div {
+      background-image: url('/icon-candle-send.png');
+    }
+  }
+}
+
+.readPoliciesButton {
+  font-size: 0.85rem !important;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@media screen and (max-width: 768px) {
+
+  .prayerForm {
+
+    > div {
+      width: 100%;
+
+      > div {
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  .emailIcon {
+    margin: 0 auto 4rem auto;
+    width: 380px;
+
+    span {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .container {
+    padding-top: 28%;
+    margin: 0 8%;
+  }
+
+  .title {
+    margin-bottom: 1.5rem;
+  }
+
+  .prayerForm {
+    width: 100%;
+
+    > div {
+      span {
+        line-height: 1.5rem;
+        text-align: left;
+      }
+
+      p {
+        margin-top: 1rem;
+      }
+    }
+
+    .description {
+      margin-top: 2rem;
+      font-size: 1.25rem;
+      line-height: 2rem;
+    }
+  }
+}

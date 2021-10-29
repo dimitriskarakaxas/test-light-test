@@ -1,0 +1,245 @@
+@import '../../assets/scss/variables.scss';
+
+
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: fadeIn ease 4s;
+    -webkit-animation: fadeIn ease 4s;
+
+    iframe {
+      left: 50%;
+      height: 56.25vw;
+      min-height: 100vh;
+      min-width: 177.77vh;
+      position: absolute;
+      top: 50%;
+      width: 100vw;
+      transform: translate(-50%, -50%);
+      @media screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0) {
+        /*
+          Define here the CSS styles applied only to the Safari 6 and 7 versions when
+          running them in any device (computers, iPhone, iPad, ...)
+         */
+         height: calc(var(--vw, 1vw) * 56.25);
+         min-height: calc(var(--vh, 1vh) * 100);
+         min-width: calc(var(--vh, 1vh) * 177.77);
+         width: calc(var(--vw, 1vw) * 100);
+    }
+
+    }
+}
+
+.video2 {
+  z-index: -1;
+}
+
+.video2,
+.video {
+  min-width: 100%;
+  min-height: 100%;
+  width: 100% !important;
+  position: absolute;
+    top: 0;
+}
+
+.playVideo {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  padding-top: 20%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+}
+
+.prayerSent {
+  display: block;
+  padding-top: 20%;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.hidden {
+  display: none;
+  animation: fadeOut ease 4s;
+  -webkit-animation: fadeOut ease 4s;
+}
+.shown {
+  display: block;
+}
+
+.showing {
+  animation: fadeIn ease 4s;
+  -webkit-animation: fadeIn ease 4s;
+}
+
+.hidding {
+  animation: fadeOut ease 4s;
+  -webkit-animation: fadeOut ease 4s;
+}
+
+.overlayRight {
+  //background: linear-gradient(90deg, rgba(0, 0, 0, 0) 60%, rgba(2, 16, 32, 0.95) 90%);
+  width: 10%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.overlayLeft {
+  //background: linear-gradient(270deg, rgba(0, 0, 0, 0) 60%, rgba(2, 16, 32, 0.95) 90%);
+  width: 10%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+@media screen and (max-width: 800px) {
+
+  .playVideo, .prayerSent {
+    padding-top: 28%;
+  }
+
+  .overlayRight {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 40%, rgba(2,16,32,0.95) 90%);
+    width: 1px;
+  }
+  
+  .overlayLeft {
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0) 40%, rgba(2,16,32,0.95) 90%);
+    width: 1px;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .overlayRight {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 30%, rgba(2,16,32,1) 70%);
+    width: 15%;
+  }
+  
+  .overlayLeft {
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0) 30%, rgba(2,16,32,1) 70%);
+    width: 15%;
+  }
+}
+
+
+// .video {
+//   animation: fadeIn ease 2s;
+//   position: fixed;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   min-width: 100%;
+//   min-height: 100%;
+//   -webkit-animation: fadeIn ease 2s;
+// }
+
+// .icon {
+//   cursor: pointer;
+//   margin-top: 1rem;
+
+//   &:hover {
+//     label {
+//       display: inline-block;
+//       opacity: 1;
+//       position: relative;
+//       left: 30px;
+//     }
+//   }
+
+//   label {
+//     opacity: 0;
+//     line-height: 25px;
+//   }
+// }
+
+// .title {
+//     line-height: 5rem;
+//     margin: 0 auto 2rem auto;
+//     width: 80%;
+// }
+
+// .audio {
+//     bottom: 24px;
+//     left: 0;
+//     position: absolute;
+//     right: 0;
+//     text-align: center;
+// }
+
+// .showText {
+//     text-align: center;
+//     opacity: 1;
+// }
+
+// .fadeOut {
+//   animation: fadeOut ease 5s;
+//   -webkit-animation: fadeOut ease 5s;
+//   opacity: 0;
+// }
+
+// .toolBar {
+//     bottom: 4rem;
+//     display: flex;
+//     flex-direction: column;
+//     left: .9rem;
+//     position: absolute;
+//     z-index: 1;
+
+//     button {
+//         background: none;
+//         border: 0;
+//         cursor: pointer;
+//         padding: 0;
+//     }
+// }
+
+// @keyframes fadeOut {
+//   0% { opacity: 1; }
+//   100% { 
+//     opacity: 0;
+//   }
+// }
+
+// @media screen and (max-width: 480px) {
+//   .title {
+//     font-size: 2.25rem;
+//     line-height: 3.5rem;
+//   }
+// }
+

@@ -1,0 +1,255 @@
+@import '../../../assets/scss/variables.scss';
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+.container {
+    animation: fadeIn ease 3s;
+    display: flex;
+    flex-direction: column;
+    padding: 15% 12% 0 12%;
+    height: 100%;
+    -webkit-animation: fadeIn ease 3s;
+}
+
+.prayerContainter {
+
+    h3 {
+        margin-bottom: 6rem;
+    }
+}
+
+.soundForm {
+
+    > div {
+        align-items: flex-start;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 4rem;
+    }
+
+    div {
+
+        section {
+            width: 70%;
+        }
+    }
+}
+
+.dropdownComponent {
+    position: relative;
+    cursor: pointer;
+
+    input.soundSelected {
+        height: 0;
+        width: 0;
+        position: relative;
+        top: 0;
+        display: block;
+        right: 0;
+        opacity: 0;
+        padding: 0;
+        margin: 0 auto;
+    }
+}
+
+.audioPause {
+    width: 16px;
+    height: 28px;
+    cursor: pointer;
+    border: 0;
+    text-indent: -9999px;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    background: {
+        image: url('/icon-pause.svg');
+        color: transparent;
+        size: 100%;
+    }
+}
+
+.audioPlay {
+    border: 0;
+    cursor: pointer;
+    height: 28px;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    text-indent: -9999px;
+    width: 16px;
+    background: {
+        image: url('/icon-play.svg');
+        color: transparent;
+        size: 100% 100%;
+    }
+}
+
+.emailIcon {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    margin-top: 3rem;
+    width: 25%;
+  
+    span {
+        letter-spacing: 2.6px;
+        font-size: .75rem;
+    }
+  
+    div {
+      display: block;
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 1rem auto;
+      background: {
+        image: url('/icon-candle.png');
+        size: 100%;
+      }
+    }
+  
+    &:hover {
+      div {
+        background-image: url('/icon-candle-meditate.png');
+      }
+    }
+  }
+
+
+.downloadCandleIcon {
+    background: none;
+    border: none;
+    bottom: 2rem;
+    color: white;
+    display: flex;
+    font-family: $main-font;
+    font-size: 1.25rem;
+    font-style: italic;
+    left: 2rem;
+    outline: none;
+    position: absolute;
+
+    &:before {
+        content:'';
+        width: 18px;
+        height: 18px;
+        background-image: url(/icon-download.svg);
+        background-repeat: no-repeat;
+        display: inline-block;
+        margin-right: .5rem;
+    }
+    &:hover:before {
+        background-position-y: 1px;
+    }
+}
+
+.receiveABlessingIcon {
+    bottom: 2rem;
+    color: white;
+    display: flex;
+    font-family: $main-font;
+    font-size: 1.25rem;
+    font-style: italic;
+    position: absolute;
+    right: 2rem;
+
+    &:after {
+        content:'';
+        width: 18px;
+        height: 18px;
+        background: url('/icon-heart.svg');
+        background-repeat: no-repeat;
+        display: inline-block;
+        margin-left: .5rem;
+        margin-top: .2rem;
+    }
+    &:hover:after {
+        background-image: url('/icon-heart-hover.svg');
+    }
+}
+
+.StayHereQuietly {
+    width: 100%;
+    position: fixed;
+    /*
+    position: absolute;
+    bottom: 0;
+    animation: fadeIn ease 3s;
+    -webkit-animation: fadeIn ease 3s;
+    color: white;*/
+
+    span, h2 {
+        color: white;
+    }
+}
+
+.hidden {
+    display: none !important;
+    bottom: 100%;
+}
+
+@media screen and (max-width: 768px) {
+
+    .soundForm {
+
+        > div {
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        div {
+    
+            section {
+                width: 100%;
+            }
+        }
+    }
+
+    .emailIcon {
+        width: 280px;
+    }
+
+    .audioPause {
+        margin-left: 0;
+    }
+
+    .downloadCandleIcon {
+        
+        span {
+            display: none;
+        }
+    }
+
+    .receiveABlessingIcon {
+
+        span {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 28% 8% 0 8%;
+
+        > p {
+            font-size: .8rem;
+            line-height: 1.5rem;
+            text-align: left;
+        }
+    }
+
+    .controlDropDown {
+        min-width: 240px;
+    }
+
+    .prayerContainter {
+
+        h3 {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+} 

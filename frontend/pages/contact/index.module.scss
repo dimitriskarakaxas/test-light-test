@@ -1,0 +1,140 @@
+
+.container {
+    animation: fadeIn ease 2s;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 12% 0 12%;
+    padding: 15% 0 12% 0;
+    -webkit-animation: fadeIn ease 2s;
+
+    p {
+        margin-top: 6rem;
+    }
+}
+
+.title {
+    margin: 0 0 4rem 0;
+    display: inline-block;
+}
+
+.contactForm {
+    text-align: center;
+
+    p {
+        margin-bottom: 4rem;
+    }
+
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        width: 75%;
+
+        input[type="text"], input[type="email"] {
+            width: 42%;
+            margin: 0 2% 1rem 2%;
+        }
+
+        input[type="text"] {
+            margin-left: 0;
+        }
+
+        input[type="email"] {
+            margin-right: 0;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: none;
+            width: 100%;
+        }
+
+        p {
+            margin: 0 auto 1.75rem auto;
+            text-align: center;
+
+            a {
+                color: white;
+                text-decoration: underline;
+                margin-left: 4px;
+                font-weight: 600;
+                font-style: normal;
+            }
+        }
+
+        button {
+            width: 100%;
+        }
+    }
+}
+
+.candleButton {
+    position: absolute;
+    left: 2.75rem;
+    bottom: 2.75rem;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@media screen and (max-width: 1280px) {
+
+    .contactForm {
+
+        form {
+            width: 100%;
+
+            input[type="email"], input[type="text"] {
+                width: 43%;
+            }
+
+            input[type="email"] {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .contactForm {
+
+        form {
+
+            input[type="email"], input[type="text"] {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        margin: 0 10% 0 10%;
+        padding-top: 28%;
+    }
+    .contactForm {
+
+        p {
+            margin: 1.5rem 0;
+        }
+
+        form {
+
+            p {
+
+                a {
+                    width: 100%;
+                    text-align: left;
+                    margin-left: 29px !important;
+                    line-height: initial;
+                }
+            } 
+        }
+    }
+}
